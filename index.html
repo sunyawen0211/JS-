@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//第九章
+			//例一
+			var fruit1="苹果";
+			var fruit2="香蕉";
+			var fruit3="梨";
+			
+			//例二
+			var fruit=new Array();
+			fruit[0]="苹果";
+			fruit[1]="香蕉";
+		    fruit[2]="梨";
+			console.log(fruit);//["苹果","香蕉","梨"]
+			//简洁方法
+			var fruit=new Array("苹果","香蕉","梨");
+			console.log(fruit);//["苹果","香蕉","梨"]
+			//字面量方法
+			var fruit=["苹果","香蕉","梨"];
+			console.log(fruit);//["苹果","香蕉","梨"]
+			
+			//例三
+			var myArray=[1,2,3,4,5];
+			console.log(myArray[0]);//1
+			console.log(myArray[1]);//2
+			console.log(myArray[2]);//3
+			
+			//例四
+			var myArray=[1,2,3,4,5];
+			for(var i=0;i<myArray.length;i++){
+				document.write(myArray[i]+"<hr />");
+			}
+			
+			//例五  
+			var arr=[1,2,3,4,5,3,5];
+			console.log(arr.indexOf(3));//返回2（注意：数组索引值从0开始）
+			console.log(arr.indexOf(6));//返回-1
+			
+			//例六
+			var arr1=[1,2,3,4,5];
+			var arr2=[6,7,8];
+			console.log(arr1.concat(arr2));//[1,2,3,4,5,6,7,8]
+			console.log(arr1);//[1,2,3,4,5]
+			console.log(arr2);//[6,7,8]
+			
+			//例七
+			var arr=[1,2,3,4,5];
+			console.log(arr.join());//返回1,2,3,4,5
+			console.log(typeof arr.join());//返回String
+			console.log(arr.join("*"));//返回1*2*3*4*5
+			
+			//例八
+			var arr=[1,2,3,4,5];
+			console.log(arr.pop());//返回5
+			console.log(arr);//[1,2,3,4]
+			
+			//例九
+			var arr=[1,2,3,4,5];
+			console.log(arr.push(6,7));//返回7
+			console.log(arr);//返回[1,2,3,4,5,6,7]
+			
+			//例十
+			var arr=[1,2,3,4,5,6,7,8];
+			console.log(arr.slice(2,5));//返回[3,4,5]
+			console.log(arr.slice(2));//返回[3,4,5,6,7,8]
+			console.log(arr);//返回[1,2,3,4,5,6,7,8]
+			
+			//例十一
+			var arr=[1,2,3,4,5];
+			console.log(arr.splise(2,1));//删除，返回[3]
+			console.log(arr);
+			console.log(arr.splise(2,0,7,8));
+			console.log(arr);
+			console.log(arr.splise(2,1,9));
+			console.log(arr);
+			
+			//例十二
+			var arr=[1,3,12,5,2,4,6];
+			console.log(arr.sort());
+			console.log(arr.sort(function(a,b){return a-b}));
+			console.log(arr.sort(function(a,b){return b-a}));
+			
+			//例十三
+			var arr=[1,2,3,4,5];
+			console.log(arr.reverse());//返回[5,4,3,2,1]
+			
+			//例十四
+			var arr=[1,2,3,4,5];
+			console.log(arr.shift());//返回1
+			console.log(arr);//返回[2,3,4,5]
+			
+			//例十五
+			var arr=[1,2,3,4,5];
+			console.log(arr.unshift(-1,0));//返回7
+			console.log(arr);//返回[-1,0,1,2,3,4,5]
+			
+			
+			
+			//例一
+			var fruit1="苹果";
+			var fruit2="香蕉";
+			var fruit3="梨";
+			
+			//例二
+			var fruit=new Array();
+			fruit[0]="苹果";
+			fruit[1]="香蕉";
+		    fruit[2]="梨";
+			console.log(fruit);//["苹果","香蕉","梨"]
+			//简洁方法
+			var fruit=new Array("苹果","香蕉","梨");
+			console.log(fruit);//["苹果","香蕉","梨"]
+			//字面量方法
+			var fruit=["苹果","香蕉","梨"];
+			console.log(fruit);//["苹果","香蕉","梨"]
+			
+			//例三
+			var myArray=[1,2,3,4,5];
+			console.log(myArray[0]);//1
+			console.log(myArray[1]);//2
+			console.log(myArray[2]);//3
+			
+			//例四
+			var myArray=[1,2,3,4,5];
+			for(var i=0;i<myArray.length;i++){
+				document.write(myArray[i]+"<hr />");
+			}
+			
+			//例五  
+			var arr=[1,2,3,4,5,3,5];
+			console.log(arr.indexOf(3));//返回2（注意：数组索引值从0开始）
+			console.log(arr.indexOf(6));//返回-1
+			
+			//例六
+			var arr1=[1,2,3,4,5];
+			var arr2=[6,7,8];
+			console.log(arr1.concat(arr2));//[1,2,3,4,5,6,7,8]
+			console.log(arr1);//[1,2,3,4,5]
+			console.log(arr2);//[6,7,8]
+			
+			//例七
+			var arr=[1,2,3,4,5];
+			console.log(arr.join());//返回1,2,3,4,5
+			console.log(typeof arr.join());//返回String
+			console.log(arr.join("*"));//返回1*2*3*4*5
+			
+			//例八
+			var arr=[1,2,3,4,5];
+			console.log(arr.pop());//返回5
+			console.log(arr);//[1,2,3,4]
+			
+			//例九
+			var arr=[1,2,3,4,5];
+			console.log(arr.push(6,7));//返回7
+			console.log(arr);//返回[1,2,3,4,5,6,7]
+			
+			//例十
+			var arr=[1,2,3,4,5,6,7,8];
+			console.log(arr.slice(2,5));//返回[3,4,5]
+			console.log(arr.slice(2));//返回[3,4,5,6,7,8]
+			console.log(arr);//返回[1,2,3,4,5,6,7,8]
+			
+			//例十一
+			var arr=[1,2,3,4,5];
+			console.log(arr.splise(2,1));//删除，返回[3]
+			console.log(arr);
+			console.log(arr.splise(2,0,7,8));
+			console.log(arr);
+			console.log(arr.splise(2,1,9));
+			console.log(arr);
+			
+			//例十二
+			var arr=[1,3,12,5,2,4,6];
+			console.log(arr.sort());
+			console.log(arr.sort(function(a,b){return a-b}));
+			console.log(arr.sort(function(a,b){return b-a}));
+			
+			//例十三
+			var arr=[1,2,3,4,5];
+			console.log(arr.reverse());//返回[5,4,3,2,1]
+			
+			//例十四
+			var arr=[1,2,3,4,5];
+			console.log(arr.shift());//返回1
+			console.log(arr);//返回[2,3,4,5]
+			
+			//例十五
+			var arr=[1,2,3,4,5];
+			console.log(arr.unshift(-1,0));//返回7
+			console.log(arr);//返回[-1,0,1,2,3,4,5]
+		</script>
+	</body>
+</html>
