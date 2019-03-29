@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>父窗口</h2>
+		<h2>子窗口</h2>
+		<button onclick="open_win()">打开窗口</button>
+	    <button onclick="close_win()">关闭子窗口</button>
+		<button onclick="close_win()">关闭父窗口</button>
+		<button onclick="window.close()">关闭当前窗口</button>
+		<button onclick="openWin()">打开窗口</button>
+		<button onclick="moveTo()">移动窗口位置moveTo</button>
+		<button onclick="moveBy()">移动窗口位置moveBy</button>
+		<button onclick="resizeTo()">改变窗口大小resizeTo</button>
+		<button onclick="resizeBy()">改变窗口大小resizeBy</button>
+		<button onclick="stop()">取消弹窗</button>
+		<input type="text" id="time" size="50" />
+		<button onclick="stop()">时间停止</button>
+	<script>
+			//window对象
+			window.alert('Hello World!');
+			alert('Hello World!');
+			//打开和关闭窗口
+			var newWin;
+			function open_win(){
+				newWin = window.open("navigator.html","new","height=400,width=400,top=0,left=0");
+			}
+			function close_win(){
+				if (newWin&&!newWin.closed) {
+					newWin.close();
+				}
+			}
+			function close_win(){
+				if (window.opener&&!opener.closed) {
+					opener.close();
+				}
+			}
+			function openWin(){
+				myWindow=window.open('','','width=200,height=100');
+				myWindow.document.write("<p>这是我的窗口</p>");
+			}
+			function moveTo(){
+				myWindow.moveTo(20,50);
+			}
+			function moveBy(){
+				myWindow.moveBy(20,50);
+			}
+			function resizeTo(){
+				myWindow.resizeTo(300,300);
+			}
+			function resizeBy(){
+				myWindow.resizeBy(300,300);
+			}
+			//定时设定
+			var timer=setTimeout(function(){
+				alert("Hello World!");
+			},3000);
+			function stop(){
+				clearTimeout(timer);
+			}
+			var timer=setInterval(function clock(){
+				var now=new Date();document.getElementById("time").value=now;
+			},1000);
+			function stop(){
+				clearInterval(timer);
+			}
+			//Location对象
+			console.log(location.port);
+			console.log(location.hostname);
+			location.hash="#contents";
+			//刷新页面
+			location.reload();
+			location.reload(true);
+			//History对象
+			history.go(-3);
+			history.go(2);
+			history.forward();
+			history.back();
+			//Navigator对象
+			document.write("<p>浏览器：")
+			document.write(navigator.appName+"</p>")
+			
+			document.write("<p>浏览器版本：")
+			document.write(navigator.appVersion+"</p>")
+			
+			document.write("<p>浏览器的用户代理报头：")
+			document.write(navigator.userAgent+"</p>")
+			
+			document.write("<p>平台：")
+			document.write(navigator.platform+"</p>")
+		</script>
+
+	</body>
+</html>

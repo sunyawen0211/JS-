@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="s()">查看浏览信息</button>		
+		<script>
+			function s(){
+				setTimeout(function(){
+					New=window.open("navigator.html","ni","height=450px,width=450px");
+				},3000);
+				setTimeout(function(){
+					if (New&&!New.closed) {
+						New.close();
+						location.href='navigator.html';
+					}
+				},8000);
+			}
+		
+
+		</script>
+
+	</body>
+</html>
